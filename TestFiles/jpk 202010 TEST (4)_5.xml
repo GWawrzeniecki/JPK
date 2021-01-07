@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<JPK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://crd.gov.pl/wzor/2020/05/08/9393/">
+  <Naglowek>
+    <KodFormularza wersjaSchemy="1-2E" kodSystemowy="JPK_V7M (1)">JPK_VAT</KodFormularza>
+    <WariantFormularza>1</WariantFormularza>
+    <DataWytworzeniaJPK>2000-12-15T12:31:50</DataWytworzeniaJPK>
+    <NazwaSystemu>Microsoft Dynamics Axapta 2009</NazwaSystemu>
+    <CelZlozenia poz="P_7">1</CelZlozenia>
+    <KodUrzedu>1342</KodUrzedu>
+    <Rok>2000</Rok>
+    <Miesiac>10</Miesiac>
+  </Naglowek>
+  <Podmiot1 rola="Podatnik">
+    <OsobaNiefizyczna>
+      <NIP>734734737</NIP>
+      <PelnaNazwa>dfdfd</PelnaNazwa>
+      <Email>dfdfd</Email>
+      <Telefon>11 222 65 33</Telefon>
+    </OsobaNiefizyczna>
+  </Podmiot1>
+  <Deklaracja>
+    <Naglowek>
+      <KodFormularzaDekl kodSystemowy="VAT-7 (21)" wersjaSchemy="1-2E" rodzajZobowiazania="Z" kodPodatku="VAT">VAT-7</KodFormularzaDekl>
+      <WariantFormularzaDekl>21</WariantFormularzaDekl>
+    </Naglowek>
+    <PozycjeSzczegolowe>
+      <P_11>0</P_11>
+      <P_13>0</P_13>
+      <P_15>0</P_15>
+      <P_16>0</P_16>
+      <P_17>425</P_17>
+      <P_18>34</P_18>
+      <P_19>2323</P_19>
+      <P_20>2323</P_20>
+      <P_21>2323</P_21>
+      <P_22>74323232</P_22>
+      <P_24>23323</P_24>
+      <P_25>0</P_25>
+      <P_26>0</P_26>
+      <P_27>0</P_27>
+      <P_28>0</P_28>
+      <P_29>1536823322</P_29>
+      <P_30>266232309</P_30>
+      <P_31>0</P_31>
+      <P_32>0</P_32>
+      <P_37>33</P_37>
+      <P_38>4448</P_38>
+      <P_40>5640</P_40>
+      <P_41>1297</P_41>
+      <P_42>2123715</P_42>
+      <P_43>478528</P_43>
+      <P_48>334</P_48>
+      <P_51>43514483</P_51>
+    </PozycjeSzczegolowe>
+    <Pouczenia>1</Pouczenia>
+  </Deklaracja>
+  <Ewidencja>
+    <SprzedazWiersz>
+      <LpSprzedazy>1</LpSprzedazy>
+      <KodKrajuNadaniaTIN>AT</KodKrajuNadaniaTIN>
+      <NrKontrahenta>gfgfg</NrKontrahenta>
+      <NazwaKontrahenta>Bfgfgfg</NazwaKontrahenta>
+      <DowodSprzedazy>dfgdfgdg</DowodSprzedazy>
+      <DataWystawienia>2020-10-01</DataWystawienia>
+      <K_23>3434.88</K_23>
+      <K_24>3434.93</K_24>
+    </SprzedazWiersz>
+    <SprzedazCtrl>
+      <LiczbaWierszySprzedazy>343</LiczbaWierszySprzedazy>
+      <PodatekNalezny>4545.94</PodatekNalezny>
+    </SprzedazCtrl>
+    <ZakupWiersz>
+      <LpZakupu>1</LpZakupu>
+      <NrDostawcy>1242141</NrDostawcy>
+      <NazwaDostawcy>sdgsgs</NazwaDostawcy>
+      <DowodZakupu>353/5/5</DowodZakupu>
+      <DataZakupu>2020-10-01</DataZakupu>
+      <K_42>3434.00</K_42>
+      <K_43>3434.39</K_43>
+    </ZakupWiersz>
+    <ZakupCtrl>
+      <LiczbaWierszyZakupow>454</LiczbaWierszyZakupow>
+      <PodatekNaliczony>45454.02</PodatekNaliczony>
+    </ZakupCtrl>
+  </Ewidencja>
+</JPK>

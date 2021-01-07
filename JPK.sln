@@ -19,6 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrismJPKEditor.Services", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrismJPKEditor.Services.Interfaces", "PrismJPKEditor.Services.Interfaces\PrismJPKEditor.Services.Interfaces.csproj", "{2463BD68-C430-48D7-9907-CA4BD0140B59}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestFiles", "TestFiles", "{B7B0624D-B213-428B-8C1C-37A8ED41C78B}"
+	ProjectSection(SolutionItems) = preProject
+		T:\IT\JPK\JPK\2020\jpk 202010 TEST (4)_5.xml = T:\IT\JPK\JPK\2020\jpk 202010 TEST (4)_5.xml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
