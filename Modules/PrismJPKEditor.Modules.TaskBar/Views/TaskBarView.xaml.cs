@@ -1,5 +1,4 @@
-﻿using Prism.Regions;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
 namespace PrismJPKEditor.Modules.TaskBar.Views
 {

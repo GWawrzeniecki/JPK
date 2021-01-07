@@ -1,6 +1,5 @@
 ﻿using MahApps.Metro.Controls;
 using Prism.Regions;
-using System.Windows;
 
 namespace PrismJPKEditor.Views
 {

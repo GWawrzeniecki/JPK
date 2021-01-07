@@ -1,8 +1,4 @@
 ﻿using MahApps.Metro.Controls;
-using Prism.Mvvm;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace PrismJPKEditor.Modules.JPK.ViewModels
 {

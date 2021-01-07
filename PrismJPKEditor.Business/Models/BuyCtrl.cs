@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PrismJPKEditor.Business.Models
+﻿namespace PrismJPKEditor.Business.Models
 {
     public class BuyCtrl : BusinessBase
     {

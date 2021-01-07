@@ -1,9 +1,4 @@
 ﻿using MahApps.Metro.Controls.Dialogs;
-using Prism.Services.Dialogs;
-using System;
-using System.ComponentModel;
-using System.Windows;
-using System.Windows.Controls;
 
 namespace PrismJPKEditor.Views
 {

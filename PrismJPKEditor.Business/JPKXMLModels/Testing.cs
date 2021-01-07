@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PrismJPKEditor.Business.JPKTest
+﻿namespace PrismJPKEditor.Business.JPKTest
 {
-    
 
 
-// NOTE: Generated code may require at least .NET Framework 4.5 or .NET Core/Standard 2.0.
-/// <remarks/>
-[System.SerializableAttribute()]
+
+    // NOTE: Generated code may require at least .NET Framework 4.5 or .NET Core/Standard 2.0.
+    /// <remarks/>
+    [System.SerializableAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
 [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "http://crd.gov.pl/wzor/2020/05/08/9393/")]
 [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://crd.gov.pl/wzor/2020/05/08/9393/", IsNullable = false)]

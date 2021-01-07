@@ -1,15 +1,11 @@
 ﻿using Prism.Commands;
-using Prism.Events;
 using Prism.Mvvm;
-using Prism.Regions;
 using Prism.Services.Dialogs;
 using PrismJPKEditor.Core.Dialogs;
 using PrismJPKEditor.Core.SharedVariables;
 using PrismJPKEditor.Services.Interfaces;
 using System;
 using System.Threading.Tasks;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace PrismJPKEditor.Modules.TaskBar.ViewModels
 {

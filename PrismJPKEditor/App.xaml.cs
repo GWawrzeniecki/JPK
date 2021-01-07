@@ -6,10 +6,8 @@ using PrismJPKEditor.Core;
 using PrismJPKEditor.Core.Regions;
 using PrismJPKEditor.Modules.JPK;
 using PrismJPKEditor.Modules.TaskBar;
-using PrismJPKEditor.ViewModels;
 using PrismJPKEditor.Views;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace PrismJPKEditor
 {

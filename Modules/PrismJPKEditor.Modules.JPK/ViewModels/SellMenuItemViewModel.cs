@@ -1,9 +1,6 @@
 ﻿using MahApps.Metro.IconPacks;
 using Prism.Commands;
-using Prism.Regions;
 using PrismJPKEditor.Core;
-using System.Linq;
-using System.Windows;
 
 namespace PrismJPKEditor.Modules.JPK.ViewModels
 {

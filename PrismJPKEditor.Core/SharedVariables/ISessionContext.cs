@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace PrismJPKEditor.Core.SharedVariables
+﻿namespace PrismJPKEditor.Core.SharedVariables
 {
     public interface ISessionContext
     {

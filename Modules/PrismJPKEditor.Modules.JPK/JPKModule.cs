@@ -1,12 +1,9 @@
 ﻿using Prism.Ioc;
 using Prism.Modularity;
-using Prism.Mvvm;
 using Prism.Regions;
 using PrismJPKEditor.Core;
 using PrismJPKEditor.Modules.JPK.ViewModels;
 using PrismJPKEditor.Modules.JPK.Views;
-using PrismJPKEditor.Services;
-using PrismJPKEditor.Services.Interfaces;
 
 namespace PrismJPKEditor.Modules.JPK
 {

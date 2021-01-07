@@ -1,8 +1,4 @@
-﻿using PrismJPKEditor.Modules.JPK.Extensions;
-using System;
-using System.Data;
-using System.Windows.Controls;
-using System.Windows.Data;
+﻿using System.Windows.Controls;
 
 namespace PrismJPKEditor.Modules.JPK.Views
 {
