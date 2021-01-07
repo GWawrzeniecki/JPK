@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="PrismJPKEditor.Modules.JPK.Views.Buy"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True"
+               xmlns:converters="clr-namespace:PrismJPKEditor.Modules.JPK.Converters"
+                xmlns:System="clr-namespace:System;assembly=mscorlib">
+    <Grid>
+
+        <Grid.Resources>
+            <converters:StringToNullableIntConverter x:Key="StringToNullableIntConverter"/>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid Grid.Row="0"  EnableRowVirtualization="True" EnableColumnVirtualization="True" GridLinesVisibility="All" ItemsSource="{Binding SessionContext.JPKDataSource.Buy.BuyRows}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Lp Zakupu" Binding="{Binding LpZakupu}" />
+                <DataGridTextColumn Header="Kod kraju nadania TIN" Binding="{Binding KodKrajuNadaniaTIN}" />
+                <DataGridTextColumn Header="Numer dostawcy" Binding="{Binding NrDostawcy}" />
+                <DataGridTextColumn Header="Nazwa dostawcy" Binding="{Binding NazwaDostawcy}" />
+                <DataGridTextColumn Header="Dowód zakupu" Binding="{Binding DowodZakupu}" />
+                <DataGridTextColumn Header="Data zakupu" Binding="{Binding DataZakupu}" />
+                <DataGridTextColumn Header="Data wplywu" Binding="{Binding DataWplywu}" />
+                <DataGridTextColumn Header="Dokument zakupu" Binding="{Binding DokumentZakupu}" />
+                <DataGridTextColumn Header="MPP" Binding="{Binding MPP, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="IMP" Binding="{Binding IMP, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="K_40" Binding="{Binding K_40, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_41" Binding="{Binding K_41, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_42" Binding="{Binding K_42, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_43" Binding="{Binding K_43, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_44" Binding="{Binding K_44, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_45" Binding="{Binding K_45, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_46" Binding="{Binding K_46, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_47" Binding="{Binding K_47, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="ZakupVAT_Marza" Binding="{Binding ZakupVAT_Marza, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid Grid.Row="1" ItemsSource="{Binding SessionContext.JPKDataSource.Buy.BuyCtrl}" AutoGenerateColumns="False" CanUserDeleteRows="False" CanUserAddRows="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Liczba wierszy zakupów" Binding="{Binding LiczbaWierszyZakupow}" />
+                <DataGridTextColumn Header="PodatekNaliczony" Binding="{Binding PodatekNaliczony, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>
+

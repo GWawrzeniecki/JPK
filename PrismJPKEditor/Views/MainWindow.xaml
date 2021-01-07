@@ -1,0 +1,78 @@
+﻿<mah:MetroWindow x:Class="PrismJPKEditor.Views.MainWindow"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/" 
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+                  xmlns:viewModels="clr-namespace:PrismJPKEditor.Modules.JPK.ViewModels;assembly=PrismJPKEditor.Modules.JPK"
+                 xmlns:views="clr-namespace:PrismJPKEditor.Modules.JPK.Views;assembly=PrismJPKEditor.Modules.JPK"
+           
+        xmlns:core="clr-namespace:PrismJPKEditor.Core;assembly=PrismJPKEditor.Core" xmlns:intr="http://schemas.microsoft.com/xaml/behaviors"
+                 Title="{Binding Title}" Height="1050" Width="1680" WindowStartupLocation="CenterScreen" >
+
+
+    <intr:Interaction.Triggers>
+        <intr:EventTrigger EventName="Loaded">
+            <intr:InvokeCommandAction Command="{Binding WindowLoaded}"/>
+        </intr:EventTrigger>
+    </intr:Interaction.Triggers>
+
+    <DockPanel LastChildFill="True">
+        <DockPanel.Resources>
+            <DataTemplate x:Key="MenuItemTemplate" DataType="{x:Type viewModels:MenuItemViewModel}">
+                <Grid x:Name="RootGrid"
+                      Height="48"
+                      Background="Transparent">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="48" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <ContentControl Grid.Column="0"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Content="{Binding Icon}"
+                                    Focusable="False" />
+                    <TextBlock Grid.Column="1"
+                               VerticalAlignment="Center"
+                               FontSize="16"
+                               Text="{Binding Label}" />
+                </Grid>
+                <DataTemplate.Triggers>
+                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type mah:HamburgerMenu}}, Path=IsPaneOpen}" Value="False">
+                        <Setter TargetName="RootGrid" Property="ToolTip" Value="{Binding ToolTip, Mode=OneWay}" />
+                    </DataTrigger>
+                </DataTemplate.Triggers>
+            </DataTemplate>
+        </DockPanel.Resources>
+
+
+
+        <Menu Padding="5"  DockPanel.Dock="Top" prism:RegionManager.RegionName="{x:Static core:RegionNames.MenuRegion}" >
+
+        </Menu>
+
+        <mah:HamburgerMenu    DockPanel.Dock="Left" ItemTemplate="{StaticResource MenuItemTemplate}" SelectedItem="{Binding SelectedHamburgerMenuItem}"  OptionsItemTemplate="{StaticResource MenuItemTemplate}">
+            <mah:HamburgerMenu.ItemsSource>
+
+                <mah:HamburgerMenuItemCollection prism:RegionManager.RegionName="{x:Static core:RegionNames.HamburgerMenuRegion}"/>
+            </mah:HamburgerMenu.ItemsSource>
+
+            
+            <mah:HamburgerMenu.Content>
+                <AdornerDecorator>
+                <Grid>
+                    <mah:TransitioningContentControl x:Name="contentRegionControl" Grid.Row="1" prism:RegionManager.RegionName="{x:Static core:RegionNames.ContentRegion}"/>
+                </Grid>
+            </AdornerDecorator>
+
+            </mah:HamburgerMenu.Content>
+
+        </mah:HamburgerMenu>
+
+
+
+    </DockPanel>
+</mah:MetroWindow>
+
+

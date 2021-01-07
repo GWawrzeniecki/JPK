@@ -1,0 +1,125 @@
+﻿<UserControl x:Class="PrismJPKEditor.Modules.JPK.Views.Sell"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True"
+             xmlns:converters="clr-namespace:PrismJPKEditor.Modules.JPK.Converters"            
+             xmlns:System="clr-namespace:System;assembly=mscorlib">
+    
+
+
+
+
+
+    <Grid>
+
+        <Grid.Resources>
+            <converters:StringToNullableIntConverter x:Key="StringToNullableIntConverter"/>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <DataGrid Grid.Row="0"  EnableRowVirtualization="True" EnableColumnVirtualization="True" GridLinesVisibility="All" ItemsSource="{Binding SessionContext.JPKDataSource.Sell.SellRows}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Lp Sprzedazy" Binding="{Binding LpSprzedazy}" />
+                <DataGridTextColumn Header="Kod kraju nadania TIN" Binding="{Binding KodKrajuNadaniaTIN}" />
+                <DataGridTextColumn Header="Numer kontrahenta" Binding="{Binding NrKontrahenta}" />
+                <DataGridTextColumn Header="Nazwa kontrahenta" Binding="{Binding NazwaKontrahenta}" />
+                <DataGridTextColumn Header="Dowód sprzedaży" Binding="{Binding DowodSprzedazy}" />
+                <DataGridTextColumn Header="Data wystawienia" Binding="{Binding DataWystawienia}" />
+                <DataGridTextColumn Header="Data sprzedaży" Binding="{Binding DataSprzedazy}" />
+                <DataGridTextColumn Header="Typ dokumentu" Binding="{Binding TypDokumentu}" />
+                <DataGridTextColumn Header="GTU_1" Binding="{Binding GTU_01, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="GTU_2" Binding="{Binding GTU_02, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="GTU_3" Binding="{Binding GTU_03, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="GTU_4" Binding="{Binding GTU_04, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="GTU_5" Binding="{Binding GTU_05, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="GTU_6" Binding="{Binding GTU_06, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="GTU_7" Binding="{Binding GTU_07, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="GTU_8" Binding="{Binding GTU_08, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="GTU_9" Binding="{Binding GTU_09, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="GTU_10" Binding="{Binding GTU_10, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="GTU_11" Binding="{Binding GTU_11, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="GTU_12" Binding="{Binding GTU_12, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="GTU_13" Binding="{Binding GTU_13, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="SW" Binding="{Binding SW, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="EE" Binding="{Binding EE, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="TP" Binding="{Binding TP, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="TT_WNT" Binding="{Binding TT_WNT, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="TT_D" Binding="{Binding TT_D, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="MR_UZ" Binding="{Binding MR_UZ, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="I_42" Binding="{Binding I_42, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="I_63" Binding="{Binding I_63, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="B_SPV" Binding="{Binding B_SPV, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="B_SPV_DOSTAWA" Binding="{Binding B_SPV_DOSTAWA, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="B_MPV_PROWIZJA" Binding="{Binding B_MPV_PROWIZJA, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="MPP" Binding="{Binding MPP, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="KorektaPodstawyOpodt" Binding="{Binding KorektaPodstawyOpodt, Converter={StaticResource StringToNullableIntConverter}}" />
+                <DataGridTextColumn Header="K_10" Binding="{Binding K_10, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_11" Binding="{Binding K_11, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_12" Binding="{Binding K_12, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_13" Binding="{Binding K_13, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_14" Binding="{Binding K_14, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_15" Binding="{Binding K_15, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_16" Binding="{Binding K_16, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_17" Binding="{Binding K_17, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_18" Binding="{Binding K_18, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_19" Binding="{Binding K_19, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_20" Binding="{Binding K_20, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_21" Binding="{Binding K_21, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_22" Binding="{Binding K_22, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_23" Binding="{Binding K_23, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_24" Binding="{Binding K_24, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_25" Binding="{Binding K_25, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_26" Binding="{Binding K_26, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_27" Binding="{Binding K_27, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_28" Binding="{Binding K_28, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_29" Binding="{Binding K_29, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_30" Binding="{Binding K_30, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_31" Binding="{Binding K_31, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_32" Binding="{Binding K_32, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_33" Binding="{Binding K_33, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_34" Binding="{Binding K_34, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_35" Binding="{Binding K_35, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="K_36" Binding="{Binding K_36, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+                <DataGridTextColumn Header="SprzedazVAT_Marza" Binding="{Binding SprzedazVAT_Marza, TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <DataGrid Grid.Row="1"  ItemsSource="{Binding SessionContext.JPKDataSource.Sell.SellCtrl}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False">
+
+
+            <DataGrid.Resources>
+                <!--<Style  TargetType="{x:Type DataGridCell}" BasedOn="{StaticResource MahApps.Styles.DataGridCell}" >
+                    <Style.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+
+
+                            </MultiTrigger.Conditions>
+
+
+                        </MultiTrigger>
+                    </Style.Triggers>
+                </Style>-->
+
+
+
+            </DataGrid.Resources>
+
+            <DataGrid.Columns >
+                <DataGridTextColumn Header="Liczba wierszy sprzedaży" Binding="{Binding LiczbaWierszySprzedazy}" />
+                <DataGridTextColumn   Header="Podatek należny" Binding="{Binding PodatekNalezny,UpdateSourceTrigger=PropertyChanged,ValidatesOnDataErrors=True,TargetNullValue={x:Static System:String.Empty} ,StringFormat='{}{0:F2}'}"/>
+
+
+            </DataGrid.Columns>
+
+
+        </DataGrid>
+
+
+    </Grid>
+
+</UserControl>
