@@ -1,0 +1,40 @@
+﻿<mah:MetroWindow  xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Class="SimpleTestApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleTestApp" xmlns:model="clr-namespace:SimpleTestApp.Model"
+                  mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <mah:MetroWindow.DataContext>
+        <model:VM />
+    </mah:MetroWindow.DataContext>
+    <Grid>
+        <mah:HamburgerMenu Content="{Binding RelativeSource={RelativeSource Mode=Self}, Path=SelectedItem.Tag}">
+            <mah:HamburgerMenu.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Label}" />
+                </DataTemplate>
+            </mah:HamburgerMenu.ItemTemplate>
+            <mah:HamburgerMenu.ItemsSource>
+                <mah:HamburgerMenuItemCollection>
+                    <mah:HamburgerMenuGlyphItem Label="Men">
+                        <mah:HamburgerMenuGlyphItem.Tag>
+                            <DataGrid ItemsSource="{Binding Men}"/>
+                        </mah:HamburgerMenuGlyphItem.Tag>
+                    </mah:HamburgerMenuGlyphItem>
+                    <mah:HamburgerMenuGlyphItem Label="Women">
+                        <mah:HamburgerMenuGlyphItem.Tag>
+                            <DataGrid ItemsSource="{Binding Women}"/>
+                        </mah:HamburgerMenuGlyphItem.Tag>
+                    </mah:HamburgerMenuGlyphItem>
+                </mah:HamburgerMenuItemCollection>
+            </mah:HamburgerMenu.ItemsSource>
+            <mah:HamburgerMenu.ContentTemplate>
+                <DataTemplate>
+                    <ContentControl Content="{Binding}" />
+                </DataTemplate>
+            </mah:HamburgerMenu.ContentTemplate>
+        </mah:HamburgerMenu>
+    </Grid>
+</mah:MetroWindow>
