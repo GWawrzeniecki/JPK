@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TestFiles", "TestFiles", "{
 		T:\IT\JPK\JPK\2020\jpk 202010 TEST (4)_5.xml = T:\IT\JPK\JPK\2020\jpk 202010 TEST (4)_5.xml
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTestApp", "SimpleTestApp\SimpleTestApp.csproj", "{32B24208-F5DE-498E-804C-1955D79380A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,6 +60,10 @@ Global
 		{2463BD68-C430-48D7-9907-CA4BD0140B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2463BD68-C430-48D7-9907-CA4BD0140B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2463BD68-C430-48D7-9907-CA4BD0140B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B24208-F5DE-498E-804C-1955D79380A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B24208-F5DE-498E-804C-1955D79380A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B24208-F5DE-498E-804C-1955D79380A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B24208-F5DE-498E-804C-1955D79380A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
